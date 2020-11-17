@@ -1,0 +1,1 @@
+Aby uzyskać efekt fali na obiekcie, należy w panelu po lewej zaznaczyć radiobutton "wave" i suwakiem ustawić odpowiednią amplitudę (zakres aplitudy <0,1, 10> z dokładnością do jednego miejsca po przecinku, domyślna wartość 0,5).

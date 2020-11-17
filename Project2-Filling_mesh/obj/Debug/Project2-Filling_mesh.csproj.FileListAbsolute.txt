@@ -7,3 +7,4 @@ C:\Users\adasi\Desktop\Adaś\Studia\Semestr 5\Grafika komputerowa 1\Project2-Fil
 C:\Users\adasi\Desktop\Adaś\Studia\Semestr 5\Grafika komputerowa 1\Project2-Filling_mesh\Project2-Filling_mesh\obj\Debug\Project2-Filling_mesh.csproj.CoreCompileInputs.cache
 C:\Users\adasi\Desktop\Adaś\Studia\Semestr 5\Grafika komputerowa 1\Project2-Filling_mesh\Project2-Filling_mesh\obj\Debug\Project2-Filling_mesh.exe
 C:\Users\adasi\Desktop\Adaś\Studia\Semestr 5\Grafika komputerowa 1\Project2-Filling_mesh\Project2-Filling_mesh\obj\Debug\Project2-Filling_mesh.pdb
+C:\Users\adasi\Desktop\Adaś\Studia\Semestr 5\Grafika komputerowa 1\Project2-Filling_mesh\Project2-Filling_mesh\obj\Debug\Project2-Filling_mesh.csprojAssemblyReference.cache

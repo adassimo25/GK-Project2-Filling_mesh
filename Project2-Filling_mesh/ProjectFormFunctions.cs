@@ -134,7 +134,19 @@ namespace Project2_Filling_mesh
 
         private Color GetLambertColor(int x, int y)
         {
-            Vector3D normalVersor = nvTexture ? GetNormalVectorFromColor(normalVectorMap.GetPixel(x, y)) : new Vector3D(Constants.constantNormalVersor);
+            Vector3D normalVersor;
+            if (nv == 0)
+                normalVersor = GetNormalVectorFromColor(normalVectorMap.GetPixel(x, y));
+            else if (nv == 1)
+                normalVersor = new Vector3D(Constants.constantNormalVersor);
+            else
+            {
+                double rX = x - pBWidth / 2, rY = y - pBHeight / 2;
+                double rho = Math.Sqrt(rX * rX + rY * rY);
+                double phi = Math.Atan2(rY, rX);
+                double tmp = -waveAmplitude * Math.Cos(0.1 * rho) * Math.Sin(0.1 * phi);
+                normalVersor = new Vector3D(tmp, tmp, 1);
+            }
             normalVersor.Normalise();
             Vector3D lightVersor = lvConstant ? new Vector3D(Constants.constantLightVersor) : new Vector3D(lightVector.X - x, lightVector.Y - y, lightVector.Z);
             lightVersor.Normalise();

@@ -52,6 +52,9 @@
             this.labM = new System.Windows.Forms.Label();
             this.trackBarM = new System.Windows.Forms.TrackBar();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanelWave = new System.Windows.Forms.TableLayoutPanel();
+            this.normalVectorWave = new System.Windows.Forms.RadioButton();
+            this.trackBarWave = new System.Windows.Forms.TrackBar();
             this.nvTextureLoad = new System.Windows.Forms.Button();
             this.normalVectorConstant = new System.Windows.Forms.RadioButton();
             this.normalVectorTexture = new System.Windows.Forms.RadioButton();
@@ -61,16 +64,16 @@
             this.labelLightVersor = new System.Windows.Forms.Label();
             this.labelLightColor = new System.Windows.Forms.Label();
             this.labelLightColorText = new System.Windows.Forms.Label();
-            this.buttonRefresh = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.fillingInterpolation = new System.Windows.Forms.RadioButton();
             this.fillingPrecision = new System.Windows.Forms.RadioButton();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dynamicRefresh = new System.Windows.Forms.CheckBox();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Timer = new System.Windows.Forms.Timer(this.components);
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.dynamicRefresh = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -84,10 +87,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarKD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.tableLayoutPanelWave.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarWave)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.menuStrip.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel
@@ -102,7 +107,7 @@
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             this.tableLayoutPanel.RowCount = 1;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(1178, 721);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(1178, 776);
             this.tableLayoutPanel.TabIndex = 0;
             // 
             // pictureBox
@@ -111,7 +116,7 @@
             this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox.Location = new System.Drawing.Point(153, 3);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(1022, 715);
+            this.pictureBox.Size = new System.Drawing.Size(1022, 770);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
@@ -134,14 +139,14 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 7;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.5F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(144, 715);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.5F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.5F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.5F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.25F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(144, 770);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // groupBox5
@@ -152,9 +157,9 @@
             this.groupBox5.Controls.Add(this.objectColorTexture);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.groupBox5.Location = new System.Drawing.Point(3, 443);
+            this.groupBox5.Location = new System.Drawing.Point(3, 501);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(138, 104);
+            this.groupBox5.Size = new System.Drawing.Size(138, 105);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Object color";
@@ -218,7 +223,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(138, 104);
+            this.groupBox1.Size = new System.Drawing.Size(138, 105);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mesh";
@@ -313,9 +318,9 @@
             this.groupBox2.Controls.Add(this.tableLayoutFactorsPanel);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.groupBox2.Location = new System.Drawing.Point(3, 113);
+            this.groupBox2.Location = new System.Drawing.Point(3, 114);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(138, 104);
+            this.groupBox2.Size = new System.Drawing.Size(138, 113);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Factors";
@@ -338,7 +343,8 @@
             this.tableLayoutFactorsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutFactorsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutFactorsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutFactorsPanel.Size = new System.Drawing.Size(132, 82);
+            this.tableLayoutFactorsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutFactorsPanel.Size = new System.Drawing.Size(132, 91);
             this.tableLayoutFactorsPanel.TabIndex = 0;
             // 
             // trackBarKS
@@ -347,7 +353,7 @@
             this.trackBarKS.Location = new System.Drawing.Point(33, 3);
             this.trackBarKS.Maximum = 1000;
             this.trackBarKS.Name = "trackBarKS";
-            this.trackBarKS.Size = new System.Drawing.Size(104, 21);
+            this.trackBarKS.Size = new System.Drawing.Size(104, 24);
             this.trackBarKS.TabIndex = 0;
             this.trackBarKS.TabStop = false;
             this.trackBarKS.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
@@ -357,10 +363,10 @@
             // trackBarKD
             // 
             this.trackBarKD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.trackBarKD.Location = new System.Drawing.Point(33, 30);
+            this.trackBarKD.Location = new System.Drawing.Point(33, 33);
             this.trackBarKD.Maximum = 1000;
             this.trackBarKD.Name = "trackBarKD";
-            this.trackBarKD.Size = new System.Drawing.Size(104, 21);
+            this.trackBarKD.Size = new System.Drawing.Size(104, 24);
             this.trackBarKD.TabIndex = 1;
             this.trackBarKD.TabStop = false;
             this.trackBarKD.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
@@ -374,7 +380,7 @@
             this.labelKS.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.labelKS.Location = new System.Drawing.Point(3, 0);
             this.labelKS.Name = "labelKS";
-            this.labelKS.Size = new System.Drawing.Size(24, 27);
+            this.labelKS.Size = new System.Drawing.Size(24, 30);
             this.labelKS.TabIndex = 3;
             this.labelKS.Text = "k{s}";
             this.labelKS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -384,9 +390,9 @@
             this.labKD.AutoSize = true;
             this.labKD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labKD.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.labKD.Location = new System.Drawing.Point(3, 27);
+            this.labKD.Location = new System.Drawing.Point(3, 30);
             this.labKD.Name = "labKD";
-            this.labKD.Size = new System.Drawing.Size(24, 27);
+            this.labKD.Size = new System.Drawing.Size(24, 30);
             this.labKD.TabIndex = 4;
             this.labKD.Text = "k{d}";
             this.labKD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -396,9 +402,9 @@
             this.labM.AutoSize = true;
             this.labM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labM.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.labM.Location = new System.Drawing.Point(3, 54);
+            this.labM.Location = new System.Drawing.Point(3, 60);
             this.labM.Name = "labM";
-            this.labM.Size = new System.Drawing.Size(24, 28);
+            this.labM.Size = new System.Drawing.Size(24, 31);
             this.labM.TabIndex = 5;
             this.labM.Text = "m";
             this.labM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -407,11 +413,11 @@
             // 
             this.trackBarM.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarM.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.trackBarM.Location = new System.Drawing.Point(33, 57);
+            this.trackBarM.Location = new System.Drawing.Point(33, 63);
             this.trackBarM.Maximum = 100;
             this.trackBarM.Minimum = 1;
             this.trackBarM.Name = "trackBarM";
-            this.trackBarM.Size = new System.Drawing.Size(104, 22);
+            this.trackBarM.Size = new System.Drawing.Size(104, 25);
             this.trackBarM.TabIndex = 6;
             this.trackBarM.TabStop = false;
             this.trackBarM.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
@@ -420,22 +426,66 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.tableLayoutPanelWave);
             this.groupBox3.Controls.Add(this.nvTextureLoad);
             this.groupBox3.Controls.Add(this.normalVectorConstant);
             this.groupBox3.Controls.Add(this.normalVectorTexture);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.groupBox3.Location = new System.Drawing.Point(3, 223);
+            this.groupBox3.Location = new System.Drawing.Point(3, 233);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(138, 104);
+            this.groupBox3.Size = new System.Drawing.Size(138, 151);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Normal vector";
             // 
+            // tableLayoutPanelWave
+            // 
+            this.tableLayoutPanelWave.ColumnCount = 1;
+            this.tableLayoutPanelWave.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelWave.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelWave.Controls.Add(this.normalVectorWave, 0, 0);
+            this.tableLayoutPanelWave.Controls.Add(this.trackBarWave, 0, 1);
+            this.tableLayoutPanelWave.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanelWave.Location = new System.Drawing.Point(3, 97);
+            this.tableLayoutPanelWave.Name = "tableLayoutPanelWave";
+            this.tableLayoutPanelWave.RowCount = 2;
+            this.tableLayoutPanelWave.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelWave.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelWave.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelWave.Size = new System.Drawing.Size(132, 51);
+            this.tableLayoutPanelWave.TabIndex = 5;
+            // 
+            // normalVectorWave
+            // 
+            this.normalVectorWave.AutoSize = true;
+            this.normalVectorWave.Location = new System.Drawing.Point(3, 3);
+            this.normalVectorWave.Name = "normalVectorWave";
+            this.normalVectorWave.Size = new System.Drawing.Size(61, 19);
+            this.normalVectorWave.TabIndex = 3;
+            this.normalVectorWave.TabStop = true;
+            this.normalVectorWave.Text = "wave";
+            this.normalVectorWave.UseVisualStyleBackColor = true;
+            this.normalVectorWave.CheckedChanged += new System.EventHandler(this.normalVectorWave_CheckedChanged);
+            // 
+            // trackBarWave
+            // 
+            this.trackBarWave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trackBarWave.Location = new System.Drawing.Point(3, 28);
+            this.trackBarWave.Maximum = 100;
+            this.trackBarWave.Minimum = 1;
+            this.trackBarWave.Name = "trackBarWave";
+            this.trackBarWave.Size = new System.Drawing.Size(126, 20);
+            this.trackBarWave.TabIndex = 4;
+            this.trackBarWave.TabStop = false;
+            this.trackBarWave.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBarWave.Value = 5;
+            this.trackBarWave.Scroll += new System.EventHandler(this.trackBarWave_Scroll);
+            // 
             // nvTextureLoad
             // 
             this.nvTextureLoad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.nvTextureLoad.Location = new System.Drawing.Point(60, 49);
+            this.nvTextureLoad.Location = new System.Drawing.Point(63, 49);
             this.nvTextureLoad.Name = "nvTextureLoad";
             this.nvTextureLoad.Size = new System.Drawing.Size(75, 23);
             this.nvTextureLoad.TabIndex = 2;
@@ -447,18 +497,19 @@
             // normalVectorConstant
             // 
             this.normalVectorConstant.AutoSize = true;
-            this.normalVectorConstant.Location = new System.Drawing.Point(9, 78);
+            this.normalVectorConstant.Location = new System.Drawing.Point(6, 73);
             this.normalVectorConstant.Name = "normalVectorConstant";
             this.normalVectorConstant.Size = new System.Drawing.Size(83, 21);
             this.normalVectorConstant.TabIndex = 1;
             this.normalVectorConstant.Text = "constant";
             this.normalVectorConstant.UseVisualStyleBackColor = true;
+            this.normalVectorConstant.CheckedChanged += new System.EventHandler(this.normalVectorConstant_CheckedChanged);
             // 
             // normalVectorTexture
             // 
             this.normalVectorTexture.AutoSize = true;
             this.normalVectorTexture.Checked = true;
-            this.normalVectorTexture.Location = new System.Drawing.Point(9, 22);
+            this.normalVectorTexture.Location = new System.Drawing.Point(6, 22);
             this.normalVectorTexture.Name = "normalVectorTexture";
             this.normalVectorTexture.Size = new System.Drawing.Size(72, 21);
             this.normalVectorTexture.TabIndex = 0;
@@ -476,9 +527,9 @@
             this.groupBox4.Controls.Add(this.labelLightColorText);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.groupBox4.Location = new System.Drawing.Point(3, 333);
+            this.groupBox4.Location = new System.Drawing.Point(3, 390);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(138, 104);
+            this.groupBox4.Size = new System.Drawing.Size(138, 105);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Light";
@@ -540,28 +591,15 @@
             this.labelLightColorText.TabIndex = 0;
             this.labelLightColorText.Text = "Color:";
             // 
-            // buttonRefresh
-            // 
-            this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonRefresh.Location = new System.Drawing.Point(51, 47);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(81, 26);
-            this.buttonRefresh.TabIndex = 5;
-            this.buttonRefresh.Text = "Refresh";
-            this.buttonRefresh.UseVisualStyleBackColor = true;
-            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
-            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.fillingInterpolation);
             this.groupBox6.Controls.Add(this.fillingPrecision);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.groupBox6.Location = new System.Drawing.Point(3, 553);
+            this.groupBox6.Location = new System.Drawing.Point(3, 612);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(138, 74);
+            this.groupBox6.Size = new System.Drawing.Size(138, 72);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Filling";
@@ -588,6 +626,43 @@
             this.fillingPrecision.Text = "precision";
             this.fillingPrecision.UseVisualStyleBackColor = true;
             this.fillingPrecision.CheckedChanged += new System.EventHandler(this.fillingPrecision_CheckedChanged);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.dynamicRefresh);
+            this.groupBox7.Controls.Add(this.buttonRefresh);
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.groupBox7.Location = new System.Drawing.Point(3, 690);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(138, 77);
+            this.groupBox7.TabIndex = 7;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Refreshing";
+            // 
+            // dynamicRefresh
+            // 
+            this.dynamicRefresh.AutoSize = true;
+            this.dynamicRefresh.Location = new System.Drawing.Point(9, 22);
+            this.dynamicRefresh.Name = "dynamicRefresh";
+            this.dynamicRefresh.Size = new System.Drawing.Size(82, 21);
+            this.dynamicRefresh.TabIndex = 6;
+            this.dynamicRefresh.Text = "dynamic";
+            this.dynamicRefresh.UseVisualStyleBackColor = true;
+            this.dynamicRefresh.CheckedChanged += new System.EventHandler(this.dynamicRefresh_CheckedChanged);
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.buttonRefresh.Location = new System.Drawing.Point(51, 47);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(81, 26);
+            this.buttonRefresh.TabIndex = 5;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // menuStrip
             // 
@@ -620,35 +695,11 @@
             // 
             this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.dynamicRefresh);
-            this.groupBox7.Controls.Add(this.buttonRefresh);
-            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.groupBox7.Location = new System.Drawing.Point(3, 633);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(138, 79);
-            this.groupBox7.TabIndex = 7;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Refreshing";
-            // 
-            // dynamicRefresh
-            // 
-            this.dynamicRefresh.AutoSize = true;
-            this.dynamicRefresh.Location = new System.Drawing.Point(9, 22);
-            this.dynamicRefresh.Name = "dynamicRefresh";
-            this.dynamicRefresh.Size = new System.Drawing.Size(82, 21);
-            this.dynamicRefresh.TabIndex = 6;
-            this.dynamicRefresh.Text = "dynamic";
-            this.dynamicRefresh.UseVisualStyleBackColor = true;
-            this.dynamicRefresh.CheckedChanged += new System.EventHandler(this.dynamicRefresh_CheckedChanged);
-            // 
             // ProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 749);
+            this.ClientSize = new System.Drawing.Size(1178, 804);
             this.Controls.Add(this.tableLayoutPanel);
             this.Controls.Add(this.menuStrip);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
@@ -676,14 +727,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarM)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.tableLayoutPanelWave.ResumeLayout(false);
+            this.tableLayoutPanelWave.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarWave)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -733,6 +787,9 @@
         private System.Windows.Forms.CheckBox meshVisible;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.CheckBox dynamicRefresh;
+        private System.Windows.Forms.TrackBar trackBarWave;
+        private System.Windows.Forms.RadioButton normalVectorWave;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelWave;
     }
 }
 

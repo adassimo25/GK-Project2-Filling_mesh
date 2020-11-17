@@ -12,7 +12,8 @@ namespace Project2_Filling_mesh
         double dX, dY;
 
         double ks, kd, m;
-        bool nvTexture = true;
+        double waveAmplitude;
+        int nv = 0;
         bool lvConstant = true;
         bool ocTexture = true;
         bool fPrecision = true;
@@ -36,6 +37,7 @@ namespace Project2_Filling_mesh
             ks = trackBarKS.Value / Constants.kskdMaxVal;
             kd = trackBarKD.Value / Constants.kskdMaxVal;
             m = trackBarM.Value;
+            waveAmplitude = (double)trackBarWave.Value / 10.0;
 
             (pBWidth, pBHeight) = (pictureBox.Width, pictureBox.Height);
             tmpBackgroundImage = new Bitmap(Properties.Resources.default_bg, pBWidth, pBHeight);
@@ -155,12 +157,18 @@ namespace Project2_Filling_mesh
 
         private void normalVectorTexture_CheckedChanged(object sender, EventArgs e)
         {
+            if (normalVectorTexture.Checked)
+            {
+                normalVectorConstant.Checked = false;
+                normalVectorWave.Checked = false;
+                if (dynamicRefresh.Checked)
+                    nv = 0;
+            }
             if (dynamicRefresh.Checked)
             {
-                nvTexture = normalVectorTexture.Checked;
-                if (nvTexture)
+                if (nv == 0)
                     normalVectorMapGraphics.DrawImage(tmpNormalVectorMap, 0, 0, pBWidth, pBHeight);
-                if (lvConstant)
+                if (lvConstant && nv == 0)
                     RedrawAll();
             }
         }
@@ -173,6 +181,47 @@ namespace Project2_Filling_mesh
             if (dynamicRefresh.Checked)
             {
                 normalVectorMapGraphics.DrawImage(tmpNormalVectorMap, 0, 0, pBWidth, pBHeight);
+                if (lvConstant)
+                    RedrawAll();
+            }
+        }
+
+        private void normalVectorConstant_CheckedChanged(object sender, EventArgs e)
+        {
+            if (normalVectorConstant.Checked)
+            {
+                normalVectorTexture.Checked = false;
+                normalVectorWave.Checked = false;
+                if (dynamicRefresh.Checked)
+                    nv = 1;
+            }
+            if (dynamicRefresh.Checked)
+                if (lvConstant && nv == 1)
+                    RedrawAll();
+        }
+
+        private void normalVectorWave_CheckedChanged(object sender, EventArgs e)
+        {
+            if (normalVectorWave.Checked)
+            {
+                normalVectorTexture.Checked = false;
+                normalVectorConstant.Checked = false;
+                if (dynamicRefresh.Checked)
+                    nv = 2;
+            }
+            if (dynamicRefresh.Checked)
+            {
+                waveAmplitude = (double)trackBarWave.Value / 10.0;
+                if (lvConstant && nv == 2)
+                    RedrawAll();
+            }
+        }
+
+        private void trackBarWave_Scroll(object sender, EventArgs e)
+        {
+            if (dynamicRefresh.Checked)
+            {
+                waveAmplitude = (double)trackBarWave.Value / 10.0;
                 if (lvConstant)
                     RedrawAll();
             }
@@ -287,8 +336,14 @@ namespace Project2_Filling_mesh
             ks = trackBarKS.Value / Constants.kskdMaxVal;
             kd = trackBarKD.Value / Constants.kskdMaxVal;
             m = trackBarM.Value;
+            waveAmplitude = (double)trackBarWave.Value / 10.0;
 
-            nvTexture = normalVectorTexture.Checked;
+            if (normalVectorTexture.Checked)
+                nv = 0;
+            if (normalVectorConstant.Checked)
+                nv = 1;
+            if (normalVectorWave.Checked)
+                nv = 2;
             normalVectorMapGraphics.DrawImage(tmpNormalVectorMap, 0, 0, pBWidth, pBHeight);
 
             lightColor = labelLightColor.BackColor;
